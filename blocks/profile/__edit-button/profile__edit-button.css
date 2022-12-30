@@ -9,12 +9,13 @@
 }
 
 .profile__edit-button:hover {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 670px) {
     .profile__edit-button {
-        background: transparent url(../../../images/Vector-edit.svg) 50%/7.5px no-repeat;
+        background-size: 7.5px;
+        background-position: 50%;
         width: 18px;
         height: 18px;
     }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="pages/index.css">
+    <link rel="stylesheet" href="./pages/index.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesto</title>
@@ -12,13 +12,13 @@
 <body class="page">
     <div>
         <header class="header">
-            <img class="header__logo" src="images/Vector-logo.svg" alt="логотип">
+            <img class="header__logo" src="./images/Vector-logo.svg" alt="логотип">
         </header>
         <main class="content">
             <section class="profile">
                 <div class="profile__zone">
-                    <img class="profile__avatar" src="images/image.jpg" alt="Аватар">
-                    <div class="profile__Info">
+                    <img class="profile__avatar" src="./images/image.jpg" alt="Аватар">
+                    <div class="profile__info">
                         <div class="profile__edit-title">
                             <h1 class="profile__title">Жак-Ив Кусто</h1>
                             <button class="profile__edit-button" type="button" name="buttonProfile"></button>
@@ -31,45 +31,45 @@
             <section class="places">
                 <ul class="places__cards">
                     <li class="place">
-                        <img class="place__image" src="images/kirill-pershin-1088404-unsplash.png" alt="картинка">
+                        <img class="place__image" src="./images/kirill-pershin-1088404-unsplash.png" alt="картинка">
                         <div class="place__title-zone">
                             <h2 class="place__title">Карачаевск</h2>
-                            <button class="place__like-button"></button>
+                            <button class="place__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="place">
-                        <img class="place__image" src="images/kirill-pershin-1404681-unsplash.png" alt="картинка">
+                        <img class="place__image" src="./images/kirill-pershin-1404681-unsplash.png" alt="картинка">
                         <div class="place__title-zone">
                             <h2 class="place__title">Гора Эльбрус</h2>
-                            <button class="place__like-button"></button>
+                            <button class="place__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="place">
-                        <img class="place__image" src="images/kirill-pershin-1556355-unsplash.png" alt="картинка">
+                        <img class="place__image" src="./images/kirill-pershin-1556355-unsplash.png" alt="картинка">
                         <div class="place__title-zone">
                             <h2 class="place__title">Домбай</h2>
-                            <button class="place__like-button"></button>
+                            <button class="place__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="place">
-                        <img class="place__image" src="images/kirill-pershin-1404681-unsplash.png" alt="картинка">
+                        <img class="place__image" src="./images/kirill-pershin-1404681-unsplash.png" alt="картинка">
                         <div class="place__title-zone">
                             <h2 class="place__title">Гора Эльбрус</h2>
-                            <button class="place__like-button"></button>
+                            <button class="place__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="place">
-                        <img class="place__image" src="images/kirill-pershin-1556355-unsplash.png" alt="картинка">
+                        <img class="place__image" src="./images/kirill-pershin-1556355-unsplash.png" alt="картинка">
                         <div class="place__title-zone">
                             <h2 class="place__title">Домбай</h2>
-                            <button class="place__like-button"></button>
+                            <button class="place__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="place">
-                        <img class="place__image" src="images/kirill-pershin-1088404-unsplash.png" alt="картинка">
+                        <img class="place__image" src="./images/kirill-pershin-1088404-unsplash.png" alt="картинка">
                         <div class="place__title-zone">
                             <h2 class="place__title">Карачаево-Черкесская республика</h2>
-                            <button class="place__like-button"></button>
+                            <button class="place__like-button" type="button"></button>
                         </div>
                     </li>
                 </ul>
@@ -83,14 +83,14 @@
         <div class="popup__container">
             <h2 class="popup__label">Редактировать профиль</h2>
             <form class="popup__form" name="popupForm">
-                <input type="text" class='popup__name' name="user-name" placeholder="Имя" maxlength="35" required>
-                <input type="text" class='popup__text' name="user-text" placeholder="О себе" maxlength="50" required>
-                <button class="popup__button-save" type="button" name="buttonSave">Сохранить</button>
+                <input type="text" class='popup__input popup__input_type_name' name="user-name" placeholder="Имя" maxlength="35" required>
+                <input type="text" class='popup__input popup__input_type_description' name="user-text" placeholder="О себе" maxlength="50" required>
+                <button class="popup__button-save" type="submit" name="buttonSave">Сохранить</button>
             </form>
             <button class="popup__button-close" type="button" name="buttonClose"></button>
         </div>
     </div>
-    <script src="scripts/script.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
