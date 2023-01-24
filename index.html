@@ -30,56 +30,14 @@
             </section>
             <section class="places">
                 <ul class="places__cards">
-                    <li class="place">
-                        <img class="place__image" src="./images/kirill-pershin-1088404-unsplash.png" alt="картинка">
-                        <div class="place__title-zone">
-                            <h2 class="place__title">Карачаевск</h2>
-                            <button class="place__like-button" type="button"></button>
-                        </div>
-                    </li>
-                    <li class="place">
-                        <img class="place__image" src="./images/kirill-pershin-1404681-unsplash.png" alt="картинка">
-                        <div class="place__title-zone">
-                            <h2 class="place__title">Гора Эльбрус</h2>
-                            <button class="place__like-button" type="button"></button>
-                        </div>
-                    </li>
-                    <li class="place">
-                        <img class="place__image" src="./images/kirill-pershin-1556355-unsplash.png" alt="картинка">
-                        <div class="place__title-zone">
-                            <h2 class="place__title">Домбай</h2>
-                            <button class="place__like-button" type="button"></button>
-                        </div>
-                    </li>
-                    <li class="place">
-                        <img class="place__image" src="./images/kirill-pershin-1404681-unsplash.png" alt="картинка">
-                        <div class="place__title-zone">
-                            <h2 class="place__title">Гора Эльбрус</h2>
-                            <button class="place__like-button" type="button"></button>
-                        </div>
-                    </li>
-                    <li class="place">
-                        <img class="place__image" src="./images/kirill-pershin-1556355-unsplash.png" alt="картинка">
-                        <div class="place__title-zone">
-                            <h2 class="place__title">Домбай</h2>
-                            <button class="place__like-button" type="button"></button>
-                        </div>
-                    </li>
-                    <li class="place">
-                        <img class="place__image" src="./images/kirill-pershin-1088404-unsplash.png" alt="картинка">
-                        <div class="place__title-zone">
-                            <h2 class="place__title">Карачаево-Черкесская республика</h2>
-                            <button class="place__like-button" type="button"></button>
-                        </div>
-                    </li>
                 </ul>
             </section>
         </main>
         <footer class="footer">
-            <p class="footer__copyright">&copy; 2022 Масюков Егор</p>
+            <p class="footer__copyright">&copy; 2023 Масюков Егор</p>
         </footer>
     </div>
-    <div class="popup">
+    <div class="popup popup-user">
         <div class="popup__container">
             <h2 class="popup__label">Редактировать профиль</h2>
             <form class="popup__form" name="popupForm" >
@@ -89,6 +47,26 @@
             </form>
             <button class="popup__button-close" type="button" name="buttonClose" ></button>
         </div>
+    </div>
+    <div class="popup popup-cards">
+        <div class="popup__container">
+            <h2 class="popup__label">Новое место</h2>
+            <form class="popup__form" name="popupForm" >
+                <input type="text" class='popup__input popup__input_type_name' name="card-name" placeholder="Название" maxlength="35" required>
+                <input type="url" class='popup__input popup__input_type_description' name="card-url" placeholder="Ссылка на картинку" maxlength="300" required>
+                <button class="popup__button-save" type="submit" name="buttonEdit">Создать</button>
+            </form>
+            <button class="popup__button-close" type="button" name="buttonClose" ></button>
+        </div>
+    </div>
+    <div class="popup popup-image">
+        <div class="popup-image__container">
+            <div class="popup-image__opened">
+                <img class="popup-image__opened-src" src="" alt="">
+                <p class="popup-image__opened-description"></p>
+            </div>
+            <button class="popup__button-close" type="button" name="buttonClose" ></button>
+        </div>    
     </div>
     <script src="./scripts/index.js"></script>
 </body>
