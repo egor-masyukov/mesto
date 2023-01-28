@@ -105,19 +105,16 @@ const handleCardFormSubmit = (evt) => {
     name: popupInputNameCard.value,
     link: popupInputDescriptionCard.value,
   });
+  popupInputNameCard.value = '';
+  popupInputDescriptionCard.value = '';
   closePopup(popupCards)
 }
 
 cardAddButton.addEventListener('click', function openEditPopup() {
   openPopup(popupCards);
-  popupInputNameCard.value = '';
-  popupInputDescriptionCard.value = '';
 })
 
-popupCardForm.addEventListener('submit', handleCardFormSubmit, function submit(evt) {
-  evt.preventDefault();
-  closePopup(popupCards)
-})
+popupCardForm.addEventListener('submit', handleCardFormSubmit);
 
 profileEditButton.addEventListener('click', function openEditPopup() {
   openPopup(popupUser);
