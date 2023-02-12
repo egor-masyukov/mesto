@@ -4,7 +4,7 @@ const formVadationConfig = {
     submitButtonSelector: '.popup__button-save',
     inactiveButtonClass: 'popup__button-save_disabled',
     inputErrorClass: 'popup__input_type_error',
-    errorClass: 'popup__error_visible'
+    errorClass: 'popup__input-error'
 }
 function disabledSubmit(event) {
     event.preventDefault()
@@ -47,7 +47,6 @@ function addInputListener(form, config) {
             handlerFormInput(event, config)
         })
     })
-    console.log(inputList);
 }
 
 

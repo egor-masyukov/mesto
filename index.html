@@ -42,9 +42,9 @@
             <h2 class="popup__label">Редактировать профиль</h2>
             <form class="popup__form" name="popupForm" novalidate>
                 <input id="input-name" type="text" class='popup__input popup__input_type_name' name="user-name" placeholder="Имя" minlength="2" maxlength="40" required>
-                <span id="input-name-error" class="popup__error_visible"></span>
+                <span id="input-name-error" class="popup__input-error"></span>
                 <input id="input-description" type="text" class='popup__input popup__input_type_description' name="user-text" placeholder="О себе" minlength="2" maxlength="200" required>
-                <span id="input-description-error" class="popup__error_visible"></span>
+                <span id="input-description-error" class="popup__input-error"></span>
                 <button class="popup__button-save" type="submit" name="buttonSave" disabled>Сохранить</button>
             </form>
             <button class="popup__button-close" type="button" name="buttonClose" ></button>
@@ -55,9 +55,9 @@
             <h2 class="popup__label">Новое место</h2>
             <form class="popup__form" name="popupForm" novalidate>
                 <input id="input-title" type="text" class='popup__input popup__input_type_name' name="card-name" placeholder="Название" minlength="2" maxlength="30" required>
-                <span id="input-title-error" class="popup__error_visible"></span>
+                <span id="input-title-error" class="popup__input-error"></span>
                 <input id="input-link" type="url" class='popup__input popup__input_type_description' name="card-url" placeholder="Ссылка на картинку" required>
-                <span id="input-link-error" class="popup__error_visible"></span>
+                <span id="input-link-error" class="popup__input-error"></span>
                 <button class="popup__button-save popup__button-save_disabled" type="submit" name="buttonEdit" disabled>Создать</button>
             </form>
             <button class="popup__button-close" type="button" name="buttonClose" ></button>
