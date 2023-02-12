@@ -129,7 +129,7 @@ profileEditButton.addEventListener('click', function openEditPopup() {
   openPopup(popupUser);
   popupInputName.value = profileTitle.textContent;
   popupInputDescription.value = profileSubtitle.textContent;
-
+  enableValidation(formVadationConfig)
 })
 
 popupProfileForm.addEventListener('submit', function submit(evt) {
