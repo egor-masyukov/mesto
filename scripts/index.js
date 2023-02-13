@@ -19,57 +19,33 @@ const popupCardForm = popupCards.querySelector('.popup__form');
 const popupImageSrc = popupImage.querySelector('.popup-image__opened-src');
 const popupImageDescription = popupImage.querySelector('.popup-image__opened-description');
 
-// Карточки
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-]
-
 const template = document.querySelector('#template').content;
+
+function closeByEsc(evt) {
+  if (evt.key === 'Escape') {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
+  }
+}
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', closeByEsc)
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closeByEsc)
 }
 
 popupButtonClose.forEach((button) => {
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      closePopup(popup)
-    }
-  });
   const popup = button.closest('.popup');
-  button.addEventListener('click', function () { closePopup(popup) });
-  popup.onclick = function (event) {
+  button.addEventListener('mousedown', function () { closePopup(popup) });
+  popup.addEventListener('mousedown', function (event) {
     if (event.target == popup) {
       closePopup(popup)
     };
-  };
+  })
 })
 
 const createCard = (cardName) => {
