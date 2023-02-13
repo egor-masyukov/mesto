@@ -6,25 +6,32 @@ const formVadationConfig = {
     inputErrorClass: 'popup__input_type_error',
     errorClass: 'popup__input-error'
 }
+
 function disabledSubmit(event) {
     event.preventDefault()
 }
 
 function enableValidation(config) {
-    const inputList = Array.from(document.querySelectorAll(config.formSelector));
+    const formList = Array.from(document.querySelectorAll(config.formSelector));
 
-    inputList.forEach((form) => {
-        
-        addInputListener(form, config);
-        toggleButton(form, config);
+    formList.forEach((form) => {
+        const inputList = Array.from(form.querySelectorAll(config.inputSelector));
+        const buttonElement = form.querySelector(config.submitButtonSelector);
 
-    })
+        form.addEventListener('submit', (evt) => {
+            evt.preventDefault();
+            toggleButtonState(inputList, buttonElement, config);
+        });
 
+        inputList.forEach(() => {
+            addInputListener(inputList, buttonElement, config);
+
+        })
+    });
 }
 
-function handlerFormInput(event, config) {
-    const input = event.target;
-    const inputId = input.id
+function handlerFormInput(input, config) {
+    const inputId = input.id;
     const errorElement = document.querySelector(`#${inputId}-error`)
 
     if (!input.validity.valid) {
@@ -34,24 +41,34 @@ function handlerFormInput(event, config) {
         input.classList.remove(config.inputErrorClass);
         errorElement.textContent = '';
     }
-
 }
 
-function addInputListener(form, config) {
-    const inputList = Array.from(form.querySelectorAll(config.inputSelector))
-    inputList.forEach(function (item) {
-        item.addEventListener('input', (event) => {
-            handlerFormInput(event, config)
-            toggleButton(form, config);
+function addInputListener(inputList, buttonElement, config) {
+    toggleButtonState(inputList, buttonElement, config);
+
+    inputList.forEach(function (inputElement) {
+        inputElement.addEventListener('input', () => {
+            handlerFormInput(inputElement, config)
+            toggleButtonState(inputList, buttonElement, config);
         })
     })
 }
 
-function toggleButton(form, config) {
-    const buttonSubmit = form.querySelector(config.submitButtonSelector)
-    const isFormValid = form.checkValidity()
-    buttonSubmit.disabled = !isFormValid
-    buttonSubmit.classList.toggle(config.inactiveButtonClass, !isFormValid)
+function hasInvalidInput(inputList) {
+    return inputList.some((inputElement) => {
+        return !inputElement.validity.valid;
+    })
+};
 
+function toggleButtonState(inputList, buttonElement, config) {
+    if (hasInvalidInput(inputList)) {
+        buttonElement.disabled = true;
+
+        buttonElement.classList.add(config.inactiveButtonClass);
+    } else {
+        buttonElement.disabled = false;
+        buttonElement.classList.remove(config.inactiveButtonClass);
+    }
 }
+
 enableValidation(formVadationConfig)

@@ -18,7 +18,7 @@ const popupInputDescriptionCard = popupCards.querySelector('.popup__input_type_d
 const popupCardForm = popupCards.querySelector('.popup__form');
 const popupImageSrc = popupImage.querySelector('.popup-image__opened-src');
 const popupImageDescription = popupImage.querySelector('.popup-image__opened-description');
-
+//template
 const template = document.querySelector('#template').content;
 
 function closeByEsc(evt) {
@@ -84,7 +84,6 @@ initialCards.forEach(renderCard);
 
 cardAddButton.addEventListener('click', function openEditPopup() {
   openPopup(popupCards);
-  enableValidation(formVadationConfig)
 })
 
 function handleCardFormSubmit(evt) {
@@ -105,8 +104,9 @@ profileEditButton.addEventListener('click', function openEditPopup() {
   openPopup(popupUser);
   popupInputName.value = profileTitle.textContent;
   popupInputDescription.value = profileSubtitle.textContent;
-  enableValidation(formVadationConfig)
 })
+popupInputName.value = profileTitle.textContent;
+popupInputDescription.value = profileSubtitle.textContent;
 
 popupProfileForm.addEventListener('submit', function submit(evt) {
   evt.preventDefault();
