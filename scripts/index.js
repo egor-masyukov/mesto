@@ -40,7 +40,7 @@ function closePopup(popup) {
 
 popupButtonClose.forEach((button) => {
   const popup = button.closest('.popup');
-  button.addEventListener('mousedown', function () { closePopup(popup) });
+  button.addEventListener('click', function () { closePopup(popup) });
   popup.addEventListener('mousedown', function (event) {
     if (event.target == popup) {
       closePopup(popup)
@@ -103,10 +103,11 @@ popupCardForm.addEventListener('submit', handleCardFormSubmit);
 profileEditButton.addEventListener('click', function openEditPopup() {
   openPopup(popupUser);
   popupInputName.value = profileTitle.textContent;
+  popupInputName.dispatchEvent(new Event("input"))
   popupInputDescription.value = profileSubtitle.textContent;
+  popupInputDescription.dispatchEvent(new Event("input"))
 })
-popupInputName.value = profileTitle.textContent;
-popupInputDescription.value = profileSubtitle.textContent;
+
 
 popupProfileForm.addEventListener('submit', function submit(evt) {
   evt.preventDefault();

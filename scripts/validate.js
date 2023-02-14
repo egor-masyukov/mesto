@@ -7,10 +7,6 @@ const formVadationConfig = {
     errorClass: 'popup__input-error'
 }
 
-function disabledSubmit(event) {
-    event.preventDefault()
-}
-
 function enableValidation(config) {
     const formList = Array.from(document.querySelectorAll(config.formSelector));
 
@@ -18,8 +14,7 @@ function enableValidation(config) {
         const inputList = Array.from(form.querySelectorAll(config.inputSelector));
         const buttonElement = form.querySelector(config.submitButtonSelector);
 
-        form.addEventListener('submit', (evt) => {
-            evt.preventDefault();
+        form.addEventListener('submit', () => {
             toggleButtonState(inputList, buttonElement, config);
         });
 
@@ -30,18 +25,27 @@ function enableValidation(config) {
     });
 }
 
-function handlerFormInput(input, config) {
+function showInputError(input, config) {
     const inputId = input.id;
     const errorElement = document.querySelector(`#${inputId}-error`)
+    input.classList.add(config.inputErrorClass)
+    errorElement.textContent = input.validationMessage;
+};
 
+function hideInputError(input, config) {
+    const inputId = input.id;
+    const errorElement = document.querySelector(`#${inputId}-error`)
+    input.classList.remove(config.inputErrorClass);
+    errorElement.textContent = '';
+};
+
+function handlerFormInput(input, config) {
     if (!input.validity.valid) {
-        input.classList.add(config.inputErrorClass)
-        errorElement.textContent = input.validationMessage;
+        showInputError(input, config);
     } else {
-        input.classList.remove(config.inputErrorClass);
-        errorElement.textContent = '';
+        hideInputError(input, config);
     }
-}
+};
 
 function addInputListener(inputList, buttonElement, config) {
     toggleButtonState(inputList, buttonElement, config);
@@ -63,7 +67,6 @@ function hasInvalidInput(inputList) {
 function toggleButtonState(inputList, buttonElement, config) {
     if (hasInvalidInput(inputList)) {
         buttonElement.disabled = true;
-
         buttonElement.classList.add(config.inactiveButtonClass);
     } else {
         buttonElement.disabled = false;
