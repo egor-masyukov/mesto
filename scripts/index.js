@@ -103,9 +103,7 @@ popupCardForm.addEventListener('submit', handleCardFormSubmit);
 profileEditButton.addEventListener('click', function openEditPopup() {
   openPopup(popupUser);
   popupInputName.value = profileTitle.textContent;
-  popupInputName.dispatchEvent(new Event("input"))
   popupInputDescription.value = profileSubtitle.textContent;
-  popupInputDescription.dispatchEvent(new Event("input"))
 })
 
 
