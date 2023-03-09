@@ -43,9 +43,17 @@ export class FormValidator {
 
     this._inputList.forEach((item) => {
       item.addEventListener('input', () => {
-        this._handlerFormInput(item)
+        this._handlerFormInput(item);
         this._toggleButtonState();
       });
+    });
+  }
+
+  resetValidation() {
+    this._toggleButtonState();
+
+    this._inputList.forEach((inputElement) => {
+      this._hideInputError(inputElement);
     });
   }
 
@@ -59,7 +67,7 @@ export class FormValidator {
     this._addInputListener();
     this._toggleButtonState();
     this._inputList.forEach((input) => {
-      this._hideInputError(input)
+      this._hideInputError(input);
     });
   }
 }
