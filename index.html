@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto</title>
+<script defer src="main.843924ada6739a55819b.js"></script><link href="main.css" rel="stylesheet"></head>
+
+<body class="page">
+    <div>
+        <header class="header">
+            <img class="header__logo" src="images/Vector-logo.593ae7c208470b8646ee.svg" alt="логотип">
+        </header>
+        <main class="content">
+            <section class="profile">
+                <div class="profile__zone">
+                    <img class="profile__avatar" src="images/image.bbe7c5b6093ec0273de1.jpg" alt="Аватар">
+                    <div class="profile__info">
+                        <div class="profile__edit-title">
+                            <h1 class="profile__title">Жак-Ив Кусто</h1>
+                            <button class="profile__edit-button" type="button" name="buttonProfile"></button>
+                        </div>
+                        <p class="profile__subtitle">Исследователь океана</p>
+                    </div>
+                </div>
+                <button class="profile__add-button" type="button" name="buttonCards"></button>
+            </section>
+            <section class="places">
+                <ul class="places__cards">
+                </ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">&copy; 2023 Масюков Егор</p>
+        </footer>
+    </div>
+    <div class="popup popup-user">
+        <div class="popup__container">
+            <h2 class="popup__label">Редактировать профиль</h2>
+            <form class="popup__form" name="popupForm" novalidate>
+                <input id="input-name" type="text" class='popup__input popup__input_type_name' name="user-name"
+                    placeholder="Имя" minlength="2" maxlength="40" required>
+                <span id="input-name-error" class="popup__input-error"></span>
+                <input id="input-description" type="text" class='popup__input popup__input_type_description'
+                    name="user-text" placeholder="О себе" minlength="2" maxlength="200" required>
+                <span id="input-description-error" class="popup__input-error"></span>
+                <button class="popup__button-save" type="submit" name="buttonSave">Сохранить</button>
+            </form>
+            <button class="popup__button-close" type="button" name="buttonClose"></button>
+        </div>
+    </div>
+    <div class="popup popup-cards">
+        <div class="popup__container">
+            <h2 class="popup__label">Новое место</h2>
+            <form class="popup__form" name="popupForm" novalidate>
+                <input id="input-title" type="text" class='popup__input popup__input_type_name' name="card-name"
+                    placeholder="Название" minlength="2" maxlength="30" required>
+                <span id="input-title-error" class="popup__input-error"></span>
+                <input id="input-link" type="url" class='popup__input popup__input_type_description' name="card-url"
+                    placeholder="Ссылка на картинку" required>
+                <span id="input-link-error" class="popup__input-error"></span>
+                <button class="popup__button-save" type="submit"
+                    name="buttonEdit">Создать</button>
+            </form>
+            <button class="popup__button-close" type="button" name="buttonClose"></button>
+        </div>
+    </div>
+    <div class="popup popup-image">
+        <div class="popup-image__container">
+            <div class="popup-image__opened">
+                <img class="popup-image__opened-src" src="#" alt="">
+                <p class="popup-image__opened-description"></p>
+            </div>
+            <button class="popup__button-close" type="button" name="buttonClose"></button>
+        </div>
+    </div>
+    <template id="template">
+        <li class="place">
+            <img class="place__image" src="#" alt="">
+            <button class="place__button-delete" type="button"></button>
+            <div class="place__title-zone">
+                <h2 class="place__title"></h2>
+                <button class="place__like-button" type="button"></button>
+            </div>
+        </li>
+    </template>
+</body>
+
+</html>
