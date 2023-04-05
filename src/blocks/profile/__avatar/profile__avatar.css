@@ -1,18 +1,6 @@
 .profile__avatar {
-    display: flex;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
     width: 119px;
     height: 119px;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s;
-    background: transparent;
-    cursor: pointer;
-}
-
-.profile__avatar:hover {
-    background: url(../../../images/Vector-edit.svg) 50%/26px no-repeat;
-    background-color: rgba(0, 0, 0, .8);
 }

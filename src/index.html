@@ -3,12 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./pages/index.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesto</title>
 </head>
-<style ></style>
+
 <body class="page">
     <div>
         <header class="header">
@@ -18,9 +17,9 @@
             <section class="profile">
                 <div class="profile__zone">
                     <button class="profile__avatar-button">
-                     <img class="profile__avatar-src" src="<%=require('./images/image.jpg')%>" alt="Аватар">   
+                        <img class="profile__avatar-src" src="<%=require('./images/image.jpg')%>" alt="Аватар">
                     </button>
-                    
+
                     <div class="profile__info">
                         <div class="profile__edit-title">
                             <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -33,7 +32,7 @@
             </section>
             <section class="places">
                 <ul class="places__cards">
-                    
+
                 </ul>
             </section>
         </main>
@@ -61,8 +60,8 @@
             <h2 class="popup__label">Обновить аватар</h2>
             <form class="popup__form" name="popupForm" novalidate>
                 <input id="input-link" type="url" class='popup__input popup__input_type_description' name="avatar"
-                placeholder="Ссылка на аватар" required>
-            <span id="input-link-error" class="popup__input-error"></span>
+                    placeholder="Ссылка на аватар" required>
+                <span id="input-link-error" class="popup__input-error"></span>
                 <button class="popup__button-save" type="submit" name="buttonSave">Сохранить</button>
             </form>
             <button class="popup__button-close" type="button" name="buttonClose"></button>
@@ -87,8 +86,7 @@
                 <input id="input-link" type="url" class='popup__input popup__input_type_description' name="cardUrl"
                     placeholder="Ссылка на картинку" required>
                 <span id="input-link-error" class="popup__input-error"></span>
-                <button class="popup__button-save" type="submit"
-                    name="buttonEdit">Создать</button>
+                <button class="popup__button-save" type="submit" name="buttonEdit">Создать</button>
             </form>
             <button class="popup__button-close" type="button" name="buttonClose"></button>
         </div>
@@ -115,7 +113,6 @@
             </div>
         </li>
     </template>
- <script type="module" src="./pages/index.js"></script>
 </body>
 
 </html>
