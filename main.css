@@ -30,10 +30,14 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/profile/__info/profile__info.css ***!
   \*********************************************************************************************************************************************************************/
 .profile__info{display:flex;flex-direction:column;gap:7px;max-width:380px}@media screen and (max-width:670px){.profile__info{gap:9px;max-width:310px}}
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/profile/__avatar/profile__avatar.css ***!
-  \*************************************************************************************************************************************************************************/
-.profile__avatar{border-radius:50%;height:119px;-o-object-fit:cover;object-fit:cover;width:119px}
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/profile/__avatar-button/profile__avatar-button.css ***!
+  \***************************************************************************************************************************************************************************************/
+.profile__avatar-button{background:transparent;border:none;border-radius:50%;cursor:pointer;display:flex;height:119px;margin:0;padding:0;transition:background-color .3s;width:119px}.profile__avatar-button:hover{background:url(images/Vector-edit.8667ac4a523e8fc42e59.svg) 50%/26px no-repeat;background-color:rgba(0,0,0,.8)}
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/profile/__avatar-src/profile__avatar-src.css ***!
+  \*********************************************************************************************************************************************************************************/
+.profile__avatar-src{border-radius:50%;height:119px;-o-object-fit:cover;object-fit:cover;width:119px;z-index:-1}
 /*!*********************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/profile/__edit-title/profile__edit-title.css ***!
   \*********************************************************************************************************************************************************************************/
@@ -73,15 +77,23 @@
 /*!*****************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/place/__title-zone/place__title-zone.css ***!
   \*****************************************************************************************************************************************************************************/
-.place__title-zone{align-items:center;color:#000;display:flex;justify-content:space-between;margin:21px 15px auto 21px}
+.place__title-zone{align-items:center;color:#000;display:flex;justify-content:space-between;margin:21px 20px auto 21px}
 /*!*******************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/place/__title/place__title.css ***!
   \*******************************************************************************************************************************************************************/
-.place__title{font-size:24px;font-style:normal;font-weight:900;line-height:29px;margin:0;max-width:220px;overflow:hidden;padding:0;text-overflow:ellipsis;white-space:nowrap}
+.place__title{font-size:24px;font-style:normal;font-weight:900;line-height:29px;margin:5px 0 auto;max-width:220px;overflow:hidden;padding:0;text-overflow:ellipsis;white-space:nowrap}
 /*!*******************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/place/__like-button/place__like-button.css ***!
   \*******************************************************************************************************************************************************************************/
-.place__like-button{background:transparent url(images/Vector-like.87ed371465c7a6a1cd01.svg) no-repeat;border:none;cursor:pointer;height:22px;transition:.3s;width:30px}.place__like-button:hover{opacity:.5}
+.place__like-button{background:transparent url(images/Vector-like.87ed371465c7a6a1cd01.svg) no-repeat;border:none;cursor:pointer;height:22px;transition:.3s;width:23px}.place__like-button:hover{opacity:.5}
+/*!*****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/place/__like/place__like.css ***!
+  \*****************************************************************************************************************************************************************/
+.place__like{display:flex;flex-direction:column}
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/place/__like-sum/place__like-sum.css ***!
+  \*************************************************************************************************************************************************************************/
+.place__like-sum{margin:0 auto}
 /*!**********************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/place/__like-button/_active/place__like-button_active.css ***!
   \**********************************************************************************************************************************************************************************************/
