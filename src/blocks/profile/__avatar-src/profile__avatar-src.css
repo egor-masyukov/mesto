@@ -1,0 +1,7 @@
+.profile__avatar-src {
+    width: 119px;
+    height: 119px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: -1;
+}
